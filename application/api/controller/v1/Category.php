@@ -12,6 +12,7 @@ namespace app\api\controller\v1;
 use app\api\controller\BaseController;
 use app\api\model\Category as CategoryModel;
 use app\api\validate\IDMustBePositiveInt;
+use app\api\validate\IDMustBePostiveInt;
 use app\lib\exception\MissException;
 use think\Controller;
 
@@ -52,7 +53,7 @@ class Category extends BaseController
      */
     public function getCategory($id)
     {
-        $validate = new IDMustBePositiveInt();
+        $validate = new IDMustBePostiveInt();
         $validate->goCheck();
         $category = CategoryModel::getCategory($id);
         if(empty($category)){

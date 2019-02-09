@@ -48,7 +48,7 @@ class Token
     {
         $scope = self::getCurrentTokenVar('scope');
         if ($scope){
-            if ($scope == ScopeEnum::User) {
+                if ($scope == ScopeEnum::User) {
                 return true;
             } else {
                 throw new ForbiddenException();

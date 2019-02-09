@@ -51,3 +51,5 @@ Route::post('api/:version/pay/pre_order', 'api/:version.Pay/getPreOrder');
 Route::post('api/:version/pay/notify', 'api/:version.Pay/receiveNotify');
 Route::post('api/:version/pay/re_notify', 'api/:version.Pay/redirectNotify');
 
+Route::get('api/:version/search/:id', 'api/:version.Search/index');
+
