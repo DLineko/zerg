@@ -46,5 +46,10 @@ class Product extends Controller
     {
         ProductModel::destroy($id);
     }
+    /*管理员模块获取全部商品*/
+    public function getProducts(){
+        $product = ProductModel::getProducts();
+        return $product;
+    }
 
 }
