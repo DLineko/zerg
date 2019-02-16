@@ -3,7 +3,7 @@
 namespace app\api\model;
 
 use think\Model;
-
+use think\Db;
 class Product extends BaseModel
 {
     protected $autoWriteTimestamp = 'datetime';
@@ -90,6 +90,12 @@ class Product extends BaseModel
             ->order('create_time desc')
             ->select();
         return $products;
+    }
+    public static function getProducts()
+    {
+         $products = Db::table('product')->select();
+         return $products;
+
     }
 
 }

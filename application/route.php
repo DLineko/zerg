@@ -53,3 +53,6 @@ Route::post('api/:version/pay/re_notify', 'api/:version.Pay/redirectNotify');
 
 Route::get('api/:version/search/:id', 'api/:version.Search/index');
 
+Route::get('api/:version/product/getAllproduct', 'api/:version.Product/getProducts');
+Route::get('api/:version/product/deleteOne/:id', 'api/:version.Product/deleteOne');
+
