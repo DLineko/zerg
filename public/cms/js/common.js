@@ -10,6 +10,7 @@ window.base={
             type:params.type,
             url:this.g_restUrl+params.url,
             data:params.data,
+            dataType:"json",
             beforeSend: function (XMLHttpRequest) {
                 if (params.tokenFlag) {
                     XMLHttpRequest.setRequestHeader('token', that.getLocalStorage('token'));
