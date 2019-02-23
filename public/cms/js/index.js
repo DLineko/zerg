@@ -20,7 +20,7 @@ $(function(){
             data:{page:pageIndex,size:20},
             tokenFlag:true,
             sCallback:function(res) {
-                var str = getOrderHtmlStr(res);
+                var str = getOrderHtmlStr(res,1);
                 $('#order-table').append(str);
             }
         };
@@ -28,8 +28,9 @@ $(function(){
     }
 
     /*拼接html字符串*/
-    function getOrderHtmlStr(res){
-        var data = res.data;
+    function getOrderHtmlStr(res,status){
+        if(status=='1')   var data = res.data;
+         else data=res;
         if (data){
             var len = data.length,
                 str = '', item;
@@ -146,4 +147,24 @@ $(function(){
         window.base.deleteLocalStorage('token');
         window.location.href = 'login.html';
     });
+    /*d订单查询*/
+    $('#btnPost').on('click',function () {
+        var data=$('#edtSearch').val();
+
+        search(data);
+    })
+    function search(data) {
+        var params={
+            url:'search_order/'+data,
+            tokenFlag:true,
+            dataType:"json",
+            sCallback:function(res) {
+                debugger
+                $('#order-table').html("");
+                var str=getOrderHtmlStr(res,2);
+                $('#order-table').append(str);
+            }
+        };
+        window.base.getData(params);
+    }
 });

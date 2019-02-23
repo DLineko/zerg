@@ -22,4 +22,15 @@ class Search
          echo ($keywords);
       }
     }
+    public static  function getOrderID($keywords){
+        {
+            if($keywords){
+                $where['order_no'] = ['like','%'.$keywords.'%'];
+            }
+            $keywords = Db::table('order')
+            ->where($where)
+            ->select();
+            echo ($keywords);
+        }
+    }
 }
