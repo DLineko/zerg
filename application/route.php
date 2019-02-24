@@ -58,3 +58,5 @@ Route::get('api/:version/product/getAllproduct', 'api/:version.Product/getProduc
 Route::get('api/:version/product/deleteOne/:id', 'api/:version.Product/deleteOne');
 //修改
 Route::put('api/:version/product/edit', 'api/:version.Product/editProducts');
+//新增
+Route::post('api/:version/product/add', 'api/:version.Product/addProducts');

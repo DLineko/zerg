@@ -101,5 +101,8 @@ $(function(){
        // localStorage.setItem("name",id);
        window.location.href="product_edit.html"+'?id='+id;
     }
-
+    //新增商品*/
+   add_procut=function() {
+       window.location.href="product_add.html";
+   }
 });

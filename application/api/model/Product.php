@@ -117,6 +117,26 @@ class Product extends BaseModel
             ->where('id','=',$id)
             ->update($data);
         return $products;
-
     }
+    public static function addProducts()
+    {
+        $dataForm = input();
+//        $id=$dataForm['id'];
+        $name=$dataForm['name'];
+        $price=$dataForm['price'];
+        $stock=$dataForm['stock'];
+//        $main_img_url=$dataForm['main_img_url'];
+
+        $data=[
+            'name'=>$name,
+            'price'=>$price,
+            'stock'=>$stock,
+//            'main_img_url'=>$main_img_url
+        ];
+        $products=Db::table('product')
+//            ->where('id','=',$id)
+            ->insert($data);
+        return $products;
+    }
+
 }

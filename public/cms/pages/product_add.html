@@ -42,32 +42,15 @@
             </ul>
         </div>
         <div class="desktop-main">
-            <div class="sidebar-module sidebar-module-inset">
-                <h4>商品搜索：</h4>
-                    <input type="text" name="id" id="edtSearch" size="12" />
-                    <input type="submit" value="提交" id="btnPost">
-            </div>
-            <div class="sidebar-module sidebar-module-inset">
-             <button onclick="add_procut()">新增</button>
-            </div>
-            <div class="order-box">
-                <table cellspacing="0" ng-show="docArr.length>0">
-                    <thead>
-                    <tr>
-                        <td>商品名称</td>
-                        <td>价格</td>
-                        <td>商品库存</td>
-                        <td>图片</td>
-                        <td>操作</td>
-                    </tr>
-                    </thead>
-                    <tbody id="order-table">
+            <form>
+                商品名称：<input type="text" id="product-title"><br>
+                价格：<input type="text" id="product-price"><br>
+                库存：<input type="text" id="product-stock"><br>
+                图片：<img  id="procut-img" width="100px"/><br>
 
-                    </tbody>
-                </table>
-                <!--<div class="load-more">点击加载更多</div>-->
-                <!--<div class="no-more">没有更多订单了</div>-->
-            </div>
+
+            </form>
+            <button onclick="save()">提交</button>
         </div>
     </div>
 </div>
@@ -77,5 +60,5 @@
 </body>
 <script src="../js/common.js" type="application/javascript"></script>
 <script src="../js/jquery-1.8.2.min.js" type="application/javascript"></script>
-<script src="../js/product.js" type="application/javascript"></script>
+<script src="../js/product_add.js" type="application/javascript"></script>
 </html>

@@ -57,5 +57,11 @@ class Product extends Controller
         if($product)
             return '修改成功！';
     }
+    /*管理员模块新增商品*/
+    public function addProducts(){
+        $product = ProductModel::addProducts();
+        if($product)
+            return '新增成功！';
+    }
 
 }
