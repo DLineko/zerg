@@ -51,5 +51,11 @@ class Product extends Controller
         $product = ProductModel::getProducts();
         return $product;
     }
+    /*管理员模块修改商品*/
+    public function editProducts(){
+        $product = ProductModel::editProducts();
+        if($product)
+            return '修改成功！';
+    }
 
 }

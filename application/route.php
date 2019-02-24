@@ -46,7 +46,6 @@ Route::get('api/:version/order/by_user', 'api/:version.Order/getSummaryByUser');
 Route::get('api/:version/order/paginate', 'api/:version.Order/getSummary');
 
 Route::get('api/:version/order/:id', 'api/:version.Order/getDetail',[], ['id'=>'\d+']);
-
 Route::post('api/:version/pay/pre_order', 'api/:version.Pay/getPreOrder');
 Route::post('api/:version/pay/notify', 'api/:version.Pay/receiveNotify');
 Route::post('api/:version/pay/re_notify', 'api/:version.Pay/redirectNotify');
@@ -55,5 +54,7 @@ Route::get('api/:version/search_product/:id', 'api/:version.Search/index');
 Route::get('api/:version/search_order/:order', 'api/:version.Search/order_index');
 
 Route::get('api/:version/product/getAllproduct', 'api/:version.Product/getProducts');
+//删除
 Route::get('api/:version/product/deleteOne/:id', 'api/:version.Product/deleteOne');
-
+//修改
+Route::put('api/:version/product/edit', 'api/:version.Product/editProducts');

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>零食商贩－订单列表</title>
+    <link rel="shortcut icon" href="../favicon.ico"/>
+    <link href="../css/index/index.css" type="text/css" rel="stylesheet">
+    <link href="../css/index/iconfont/iconfont.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="banner-wrapper">
+    <div class="logo">
+        <img src="../imgs/logo.png">
+        <div class="logo-word">
+            <div>零食商贩</div>
+            <div>Snack Petty Vendor</div>
+        </div>
+    </div>
+    <div class="left-box">
+        <a class="register" id="login-out" title="退出">退出</a>
+    </div>
+</div>
+
+
+<div class="desktop-all-box">
+
+    <div class="desktop item-wrapper">
+        <div class="desktop-menu">
+            <ul>
+                <li class="leftbar-item">
+                    <a class="active" href="index.html">
+                        <i class="iconfont icon-list"></i>
+                        <span>订单列表</span>
+                    </a>
+                </li>
+                <li class="leftbar-item">
+                    <a class="active" href="product.html">
+                        <i class="iconfont icon-list"></i>
+                        <span>商品列表</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="desktop-main">
+        <form>
+            商品名称：<input type="text" id="product-title"><br>
+            价格：<input type="text" id="product-price"><br>
+            库存：<input type="text" id="product-stock"><br>
+            图片：<img  id="procut-img" width="100px"/><br>
+
+
+        </form>
+            <button onclick="update()">提交</button>
+        </div>
+    </div>
+</div>
+<div class="global-tips">
+    <p></p>
+</div>
+</body>
+<script src="../js/common.js" type="application/javascript"></script>
+<script src="../js/jquery-1.8.2.min.js" type="application/javascript"></script>
+<script src="../js/product_edit.js" type="application/javascript"></script>
+</html>

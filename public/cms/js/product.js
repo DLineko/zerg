@@ -42,7 +42,7 @@ $(function(){
                         '<td>' + item.price + '</td>' +
                         '<td>' + item.stock + '</td>' +
                         '<td><img src="http://y.cn/images'+item.main_img_url + '" width="50px"></td>' +
-                        '<td><a href="javascript:void(0);" onclick=\"delete_one(this,'+item.id+')\">删除</a></td>' +
+                        '<td><a href="javascript:void(0);" onclick=\"delete_one(this,'+item.id+')\">删除</a>&nbsp;&nbsp;<a href="javascript:void(0);" onclick=\"update_one(this,'+item.id+')\">修改</a></td>' +
                         '</tr>';
                 }
             }
@@ -95,6 +95,11 @@ $(function(){
         window.base.getData(params);
     }
 
-
+  //修改商品
+   update_one=function(one,id) {
+        // console.log(id)
+       // localStorage.setItem("name",id);
+       window.location.href="product_edit.html"+'?id='+id;
+    }
 
 });
