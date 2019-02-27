@@ -125,13 +125,13 @@ class Product extends BaseModel
         $name=$dataForm['name'];
         $price=$dataForm['price'];
         $stock=$dataForm['stock'];
-//        $main_img_url=$dataForm['main_img_url'];
+        $main_img_url=$dataForm['main_img_url'];
 
         $data=[
             'name'=>$name,
             'price'=>$price,
             'stock'=>$stock,
-//            'main_img_url'=>$main_img_url
+            'main_img_url'=>$main_img_url
         ];
         $products=Db::table('product')
 //            ->where('id','=',$id)

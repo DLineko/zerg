@@ -16,7 +16,7 @@ function getProduct_detail(id) {
          $('#product-title').val(res.name);
          $('#product-price').val(res.price);
          $('#product-stock').val(res.stock);
-         $('#procut-img').attr('src',res.main_img_url);
+         $('#img').attr('src',res.main_img_url);
         },
     });
 }
@@ -26,7 +26,7 @@ function update() {
         name:$('#product-title').val(),
         price:$('#product-price').val(),
         stock: $('#product-stock').val(),
-        main_img_url: $('#procut-img').attr('src')
+        main_img_url: img_url
     };
     var url = "http://y.cn/api/v1/product/edit";
     $.ajax({
@@ -34,7 +34,8 @@ function update() {
         type: "put",
         data:data,
         success: function(res) {
-            console.log(data)
+            alert(res)
+            window.location.href='product.html'
         },
     });
 }

@@ -60,3 +60,5 @@ Route::get('api/:version/product/deleteOne/:id', 'api/:version.Product/deleteOne
 Route::put('api/:version/product/edit', 'api/:version.Product/editProducts');
 //新增
 Route::post('api/:version/product/add', 'api/:version.Product/addProducts');
+//图片
+Route::post('api/:version/upImage/upload', 'api/:version.UpImage/getImage');
