@@ -1,9 +1,7 @@
 $(function(){
-
     if(!window.base.getLocalStorage('token')){
         window.location.href = 'login.html';
     }
-
     var pageIndex=1,
         moreDataFlag=true;
     getOrders(pageIndex);
@@ -21,6 +19,7 @@ $(function(){
             sCallback:function(res) {
                 var str = getOrderHtmlStr(res);
                 $('#order-table').append(str);
+                category_name()
             }
         };
         window.base.getData(params);
@@ -41,20 +40,15 @@ $(function(){
                         '<td>' + item.name + '</td>' +
                         '<td>' + item.price + '</td>' +
                         '<td>' + item.stock + '</td>' +
+                        '<td>' +item.category_name + '</td>' +
                         '<td><img src="http://y.cn/images'+item.main_img_url + '" width="50px"></td>' +
                         '<td><a href="javascript:void(0);" onclick=\"delete_one(this,'+item.id+')\">删除</a>&nbsp;&nbsp;<a href="javascript:void(0);" onclick=\"update_one(this,'+item.id+')\">修改</a></td>' +
                         '</tr>';
                 }
             }
-            // else{
-            //     ctrlLoadMoreBtn();
-            //     moreDataFlag=false;
-            // }
             return str;
         }
-        // return '';
     }
-
     /*删除商品*/
     delete_one=function (one,id) {
        var message=confirm('温馨提示：您是否确认删除该商品？');
@@ -105,4 +99,38 @@ $(function(){
    add_procut=function() {
        window.location.href="product_add.html";
    }
+   function category_name() {
+       var url = "http://y.cn/api/v1/category/category_name";
+       $.ajax({
+           url: url,
+           type: "get",
+           success: function(res)
+           {
+               console.log(res);
+
+           }
+           ,
+       });
+   }
 });
+
+// function format_categoryID(res) {
+//     var length=res.length;
+//     var ids=[];
+//     var name=[];
+//     var cagory_name;
+//     for(var i=0;i<length;i++)
+//     {
+//         name.push(res[i].name);
+//         ids.push(res[i].id);
+//     }
+//     var table = [];
+//     for(var i=0;i<ids.length;i++)
+//     {
+//         table.push(new Array(name[i]))
+//         table[i].push(ids[i]);
+//     }
+//    return (table) ;
+// }
+
+

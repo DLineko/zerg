@@ -62,3 +62,6 @@ Route::put('api/:version/product/edit', 'api/:version.Product/editProducts');
 Route::post('api/:version/product/add', 'api/:version.Product/addProducts');
 //图片
 Route::post('api/:version/upImage/upload', 'api/:version.UpImage/getImage');
+
+//分类
+Route::get('api/:version/category/category_name','api/:version.Category/getCategory_name');

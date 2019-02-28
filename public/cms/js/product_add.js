@@ -11,7 +11,6 @@ function save() {
         main_img_url: img_url
     };
     var url = "http://y.cn/api/v1/product/add";
-    debugger
     $.ajax({
         url: url,
         type: "post",

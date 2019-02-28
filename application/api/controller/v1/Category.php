@@ -63,4 +63,10 @@ class Category extends BaseController
         }
         return $category;
     }
+    public function getCategory_name()
+    {
+        $category = CategoryModel::getCategories_name();
+        return $category;
+    }
+
 }

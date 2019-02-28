@@ -93,8 +93,18 @@ class Product extends BaseModel
     }
     public static function getProducts()
     {
-         $products = Db::table('product')->select();
-         return $products;
+//         $products = Db::table('product')->select();
+        $data = Db::table('product')
+
+            ->alias('a')
+
+            ->join('category b','a.category_id=b.id')
+
+//            ->field('a.*,b.name as category_id')
+            ->field('a.*,b.name as category_name')
+            ->order('a.id')
+            ->select();
+        return $data;
 
     }
    /*修改商品*/
