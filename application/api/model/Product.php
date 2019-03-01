@@ -8,7 +8,7 @@ class Product extends BaseModel
 {
     protected $autoWriteTimestamp = 'datetime';
     protected $hidden = [
-        'delete_time', 'main_img_id', 'pivot', 'from', 'category_id',
+        'delete_time', 'main_img_id', 'pivot', 'from',
         'create_time', 'update_time'];
 
     /**
@@ -115,12 +115,14 @@ class Product extends BaseModel
         $name=$dataForm['name'];
         $price=$dataForm['price'];
         $stock=$dataForm['stock'];
+        $category_id=$dataForm['category_id'];
         $main_img_url=$dataForm['main_img_url'];
 
         $data=[
             'name'=>$name,
             'price'=>$price,
             'stock'=>$stock,
+            'category_id'=> $category_id,
             'main_img_url'=>$main_img_url
         ];
         $products=Db::table('product')
@@ -135,12 +137,13 @@ class Product extends BaseModel
         $name=$dataForm['name'];
         $price=$dataForm['price'];
         $stock=$dataForm['stock'];
+        $category_id=$dataForm['category_id'];
         $main_img_url=$dataForm['main_img_url'];
-
         $data=[
             'name'=>$name,
             'price'=>$price,
             'stock'=>$stock,
+            'category_id'=> $category_id,
             'main_img_url'=>$main_img_url
         ];
         $products=Db::table('product')

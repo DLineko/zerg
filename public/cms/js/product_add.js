@@ -1,15 +1,17 @@
 var img_url;
 $(function () {
-
+    category_name()
 })
 function save() {
     var data={
         // id:id,
         name:$('#product-title').val(),
         price:$('#product-price').val(),
+        category_id: $('#category_identify').val(),
         stock: $('#product-stock').val(),
         main_img_url: img_url
     };
+    debugger
     var url = "http://y.cn/api/v1/product/add";
     $.ajax({
         url: url,

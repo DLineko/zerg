@@ -24,7 +24,7 @@ class UpImage{
             exit ;
         }
         if (!in_array($type, $typeArr)) {
-            echo json_encode(array("error" => "清上传jpg,png或gif类型的图片！"));
+            echo json_encode(array("error" => "请上传jpg,png或gif类型的图片！"));
             exit ;
         }
         if ($size > (500 * 1024)) {

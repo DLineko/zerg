@@ -19,7 +19,6 @@ $(function(){
             sCallback:function(res) {
                 var str = getOrderHtmlStr(res);
                 $('#order-table').append(str);
-                category_name()
             }
         };
         window.base.getData(params);
@@ -99,38 +98,7 @@ $(function(){
    add_procut=function() {
        window.location.href="product_add.html";
    }
-   function category_name() {
-       var url = "http://y.cn/api/v1/category/category_name";
-       $.ajax({
-           url: url,
-           type: "get",
-           success: function(res)
-           {
-               console.log(res);
-
-           }
-           ,
-       });
-   }
 });
 
-// function format_categoryID(res) {
-//     var length=res.length;
-//     var ids=[];
-//     var name=[];
-//     var cagory_name;
-//     for(var i=0;i<length;i++)
-//     {
-//         name.push(res[i].name);
-//         ids.push(res[i].id);
-//     }
-//     var table = [];
-//     for(var i=0;i<ids.length;i++)
-//     {
-//         table.push(new Array(name[i]))
-//         table[i].push(ids[i]);
-//     }
-//    return (table) ;
-// }
 
 

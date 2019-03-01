@@ -7,12 +7,16 @@ function upload() {
         url:url,
         type: "post",
         dataType:'json',
-        // data:data,
         success: function(res) {
-            // console.log(res.pic)
-            Rex_img_src(res.pic)
-            $('#img').show().attr('src',"http://y.cn/images"+img_url);
+            if(res.error!='0') alert(res.error)
+            else {
+                Rex_img_src(res.pic)
+                $('#img').show().attr('src',"http://y.cn/images"+img_url);
+            }
         },
+        fail:function () {
+            alert('上传失败！')
+        }
     })
 }
 function Rex_img_src(src) {
