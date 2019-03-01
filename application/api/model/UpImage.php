@@ -8,6 +8,7 @@
 namespace app\api\model;
 use think\console\output\Formatter;
 use think\File;
+header("Content-type: text/html; charset=utf-8");
 class UpImage{
     public static  function getUploadImage(){
         $typeArr = array("jpg", "png", "gif","ico");
