@@ -8,10 +8,11 @@
 namespace app\api\model;
 use think\console\output\Formatter;
 use think\File;
+use think\Db;
 header("Content-type: text/html; charset=utf-8");
 class UpImage{
     public static  function getUploadImage(){
-        $typeArr = array("jpg", "png", "gif","ico");
+        $typeArr = array("jpg", "png", "gif","ico","jpeg");
         $path = "../public/images/" ;//上传路径
         $upload=$_FILES;
         $file =  $upload['file'];
@@ -27,19 +28,20 @@ class UpImage{
             echo json_encode(array("error" => "请上传jpg,png或gif类型的图片！"));
             exit ;
         }
-        if ($size > (500 * 1024)) {
-            echo json_encode(array("error" => "图片大小已超过500KB！"));
-            exit ;
-        }
+//        if ($size > (500 * 1024)) {
+//            echo json_encode(array("error" => "图片大小已超过500KB！"));
+//            exit ;
+//        }
         $time=date("YmdHis",time());
-        $pic_name = $time  .  rand(10000, 99999) ."." . $type;
+        $pic_name = $time  .  rand(100, 999) ."." . $type;
         //图片名称
         $pic_url = $path . $pic_name;
         //上传后图片路径+名称
             if (move_uploaded_file($name_tmp, $pic_url)) {//临时文件转移到目标文件夹
                 echo json_encode(array("error" => "0", "pic" => $pic_url, "name" => $pic_name));
             } else {
-                echo json_encode(array("error" => "上传有误，清检查服务器配置！"));
+                echo json_encode(array("error" => "上传有误，请检查服务器配置！"));
             }
     }
+
 }
