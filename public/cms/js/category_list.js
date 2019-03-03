@@ -72,7 +72,7 @@ $(function(){
     })
     function search(data) {
         var params={
-            url:'search_product/'+data,
+            url:'search_category/'+data,
             tokenFlag:true,
             dataType:"json",
             sCallback:function(res) {

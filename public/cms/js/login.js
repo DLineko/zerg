@@ -17,7 +17,7 @@ $(function(){
             sCallback:function(res){
                 if(res){
                     window.base.setLocalStorage('token',res.token);
-                    window.location.href = 'index.html';
+                    window.location.href = 'commons.html';
                 }
             },
             eCallback:function(e){

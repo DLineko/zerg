@@ -70,3 +70,5 @@ Route::get('api/:version/category/delete/:id','api/:version.Category/deleteCateg
 
 Route::get('api/:version/category/category_one/:id','api/:version.Category/getOne');
 Route::put('api/:version/category/edit','api/:version.Category/editCategory_name');
+//搜索
+Route::get('api/:version/search_category/:id', 'api/:version.Category/index');

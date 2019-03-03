@@ -89,4 +89,13 @@ class Category extends BaseController
         if($category)
             return '修改成功！';
     }
+    public function index()
+    {
+        $keywords=input('id');//获取搜索关键
+        if($keywords) {
+            $category = CategoryModel::getProductID($keywords);
+        }
+        return $category;
+//        return $this->fetch('search');
+    }
 }

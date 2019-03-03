@@ -555,7 +555,7 @@ body {
 .desktop {
   position: relative;
   height: 100%;
-  margin: 0 20px;
+  /*margin: 0 20px;*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
