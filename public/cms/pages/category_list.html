@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>零食商贩－订单列表</title>
+    <title>零食商贩－分类列表</title>
     <link rel="shortcut icon" href="../favicon.ico"/>
     <link href="../css/index/index.css" type="text/css" rel="stylesheet">
     <link href="../css/index/iconfont/iconfont.css" type="text/css" rel="stylesheet">
@@ -47,19 +47,31 @@
                 </li>
             </ul>
         </div>
-        <div class="desktop-main" >
-            <form id="attributeForm">
-                商品名称：<input type="text" id="product-title"><br>
-                价格：<input type="text" id="product-price"><br>
-                库存：<input type="text" id="product-stock"><br>
-                分类：<select id="category_identify">
-                    </select><br>
-                图片：<img  id="procut-img" width="100px"/><br>
-                <!--下面的隐藏域主要用来改变file类型的input的值，但是file类型的input的值出于安全考虑不让修改，但是表单提交后需要处理该值(放置图片路径)来显示服务器上的图片-->
-                <img id="img" name="uploadImg" style="display:none;width: 100px;"/>
-                请选择上传图片：<input type="file" name="file" id="fileSelectInput" onchange="upload();" accept="image/*"/>
-            </form>
-            <button onclick="save()">提交</button>
+        <div class="desktop-main">
+            <div class="sidebar-module sidebar-module-inset">
+                <h4>分类搜索：</h4>
+                <input type="text" name="id" id="edtSearch" size="12" />
+                <input type="submit" value="提交" id="btnPost">
+            </div>
+            <div class="sidebar-module sidebar-module-inset">
+                <button onclick="add_procut()">新增</button>
+            </div>
+            <div class="order-box">
+                <table cellspacing="0" ng-show="docArr.length>0">
+                    <thead>
+                    <tr>
+                        <td>品类名称</td>
+                        <td>图片</td>
+                        <td>操作</td>
+                    </tr>
+                    </thead>
+                    <tbody id="order-table">
+
+                    </tbody>
+                </table>
+                <!--<div class="load-more">点击加载更多</div>-->
+                <!--<div class="no-more">没有更多订单了</div>-->
+            </div>
         </div>
     </div>
 </div>
@@ -69,9 +81,5 @@
 </body>
 <script src="../js/common.js" type="application/javascript"></script>
 <script src="../js/jquery-1.8.2.min.js" type="application/javascript"></script>
-<script src="../js/jquery.form.js" type="application/javascript"></script>
-<script src="../js/upload_image.js" type="application/javascript"></script>
-<script src="../js/category.js" type="application/javascript"></script>
-<script src="../js/product_add.js" type="application/javascript"></script>
-
+<script src="../js/category_list.js" type="application/javascript"></script>
 </html>

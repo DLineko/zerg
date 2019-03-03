@@ -40,7 +40,7 @@ function update() {
         data:data,
         success: function(res) {
             alert(res)
-            window.location.href='product.html'
+            window.location.href='product_list.html'
         },
     });
 }

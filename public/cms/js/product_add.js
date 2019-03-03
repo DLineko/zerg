@@ -11,7 +11,6 @@ function save() {
         stock: $('#product-stock').val(),
         main_img_url: img_url
     };
-    debugger
     var url = "http://y.cn/api/v1/product/add";
     $.ajax({
         url: url,
@@ -19,7 +18,7 @@ function save() {
         data:data,
         success: function(res) {
             alert(res)
-            window.location.href='product.html'
+            window.location.href='product_list.html'
         },
     });
 }

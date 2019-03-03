@@ -68,5 +68,25 @@ class Category extends BaseController
         $category = CategoryModel::getCategories_name();
         return $category;
     }
+    public function addCategory_name()
+    {
+        $category = CategoryModel::addCategories_name();
+        if($category)
+            return '新增成功！';
+    }
+    public function deleteCategory_name($id)
+    {
+        CategoryModel::destroy($id);
+    }
+    public function getOne($id){
 
+        $product = CategoryModel::getCategoryOne($id);
+        return $product;
+    }
+    public function editCategory_name()
+    {
+        $category = CategoryModel::editCategoryOne();
+        if($category)
+            return '修改成功！';
+    }
 }

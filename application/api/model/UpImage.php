@@ -31,7 +31,7 @@ class UpImage{
 //        if ($size > (500 * 1024)) {
 //            echo json_encode(array("error" => "图片大小已超过500KB！"));
 //            exit ;
-//        }
+//        };
         $time=date("YmdHis",time());
         $pic_name = $time  .  rand(100, 999) ."." . $type;
         //图片名称

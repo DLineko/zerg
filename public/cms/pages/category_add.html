@@ -49,12 +49,8 @@
         </div>
         <div class="desktop-main" >
             <form id="attributeForm">
-                商品名称：<input type="text" id="product-title"><br>
-                价格：<input type="text" id="product-price"><br>
-                库存：<input type="text" id="product-stock"><br>
-                分类：<select id="category_identify">
-                    </select><br>
-                图片：<img  id="procut-img" width="100px"/><br>
+                品类名称：<input type="text" id="category-title"><br>
+                图片：<img  id="category-img" width="100px"/><br>
                 <!--下面的隐藏域主要用来改变file类型的input的值，但是file类型的input的值出于安全考虑不让修改，但是表单提交后需要处理该值(放置图片路径)来显示服务器上的图片-->
                 <img id="img" name="uploadImg" style="display:none;width: 100px;"/>
                 请选择上传图片：<input type="file" name="file" id="fileSelectInput" onchange="upload();" accept="image/*"/>
@@ -71,7 +67,6 @@
 <script src="../js/jquery-1.8.2.min.js" type="application/javascript"></script>
 <script src="../js/jquery.form.js" type="application/javascript"></script>
 <script src="../js/upload_image.js" type="application/javascript"></script>
-<script src="../js/category.js" type="application/javascript"></script>
-<script src="../js/product_add.js" type="application/javascript"></script>
+<script src="../js/category_add.js" type="application/javascript"></script>
 
 </html>

@@ -159,7 +159,6 @@ $(function(){
             tokenFlag:true,
             dataType:"json",
             sCallback:function(res) {
-                debugger
                 $('#order-table').html("");
                 var str=getOrderHtmlStr(res,2);
                 $('#order-table').append(str);

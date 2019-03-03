@@ -65,3 +65,8 @@ Route::post('api/:version/upImage/upload', 'api/:version.UpImage/getImage');
 
 //分类
 Route::get('api/:version/category/category_name','api/:version.Category/getCategory_name');
+Route::post('api/:version/category/add','api/:version.Category/addCategory_name');
+Route::get('api/:version/category/delete/:id','api/:version.Category/deleteCategory_name');
+
+Route::get('api/:version/category/category_one/:id','api/:version.Category/getOne');
+Route::put('api/:version/category/edit','api/:version.Category/editCategory_name');
