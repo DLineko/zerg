@@ -13,8 +13,8 @@ function save() {
         type: "post",
         data:data,
         success: function(res) {
-            alert(res)
-            // window.location.href='category_list.html'
+            alert("新增成功！")
+            window.location.href='category_list.html'
         },
     });
 }

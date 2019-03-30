@@ -3,32 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>呆呆爱读书后台－订单列表</title>
+    <link href="../css/bootstrap.min.css"  rel="stylesheet">
     <link rel="shortcut icon" href="../favicon.ico"/>
     <link href="../css/index/index.css" type="text/css" rel="stylesheet">
     <link href="../css/index/iconfont/iconfont.css" type="text/css" rel="stylesheet">
+    <style>
+        .desktop-main-all{
+            margin: 0 auto;
+        }
+        h5{
+            padding-right:10px !important;
+        }
+    </style>
 </head>
 <body>
-<div class="desktop-all-box">
-
-    <div class="desktop item-wrapper">
-        <div class="desktop-main" >
-            <form id="attributeForm">
-                品类名称：<input type="text" id="category-title"><br>
-                图片：<img  id="category-img" width="100px"/><br>
-                <!--下面的隐藏域主要用来改变file类型的input的值，但是file类型的input的值出于安全考虑不让修改，但是表单提交后需要处理该值(放置图片路径)来显示服务器上的图片-->
-                <img id="img" name="uploadImg" style="display:none;width: 100px;"/>
-                请选择上传图片：<input type="file" name="file" id="fileSelectInput" onchange="upload();" accept="image/*"/>
-            </form>
-            <button onclick="save()">提交</button>
+<div class="desktop item-wrapper">
+    <!--<div class="desktop item-wrapper">-->
+        <!--<div class="desktop-main" >-->
+            <!--<form id="attributeForm">-->
+                <!--品类名称：<input type="text" id="category-title"><br>-->
+                <!--图片：<img  id="category-img" width="100px"/><br>-->
+                <!--&lt;!&ndash;下面的隐藏域主要用来改变file类型的input的值，但是file类型的input的值出于安全考虑不让修改，但是表单提交后需要处理该值(放置图片路径)来显示服务器上的图片&ndash;&gt;-->
+                <!--<img id="img" name="uploadImg" style="display:none;width: 100px;"/>-->
+                <!--请选择上传图片：<input type="file" name="file" id="fileSelectInput" onchange="upload();" accept="image/*"/>-->
+            <!--</form>-->
+            <!--<button onclick="save()">提交</button>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="desktop-main-all" >
+        <form id="attributeForm">
+            <div class="form-group">
+                <h5 class="control-label col-sm-6 ">品类名称</h5>
+                <div class="col-sm-４">
+                    <input type="text" class="form-control" id="category-title"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h5 class="col-sm-6 control-label">图片</h5>
+                <div class="col-sm-4">
+                    <img  id="img" width="120px" style="text-align: left" name="uploadImg"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h5 class="col-sm-6 control-label">请选择上传图片</h5>
+                <div class="col-sm-4">
+                    <input type="file" name="file" id="fileSelectInput" onchange="upload();" accept="image/*"/>
+                </div>
+            </div>
+        </form>
+        <div class="form-group">
+            <div class="col-sm-4">
+                <button onclick="save()" class="btn btn-primary">提交</button>
+            </div>
         </div>
     </div>
+
 </div>
 <div class="global-tips">
     <p></p>
 </div>
 </body>
 <script src="../js/common.js" type="application/javascript"></script>
-<script src="../js/jquery-1.8.2.min.js" type="application/javascript"></script>
+<script src="../js/jquery-2.2.3.min.js" type="application/javascript"></script>
 <script src="../js/jquery.form.js" type="application/javascript"></script>
 <script src="../js/upload_image.js" type="application/javascript"></script>
 <script src="../js/category_add.js" type="application/javascript"></script>

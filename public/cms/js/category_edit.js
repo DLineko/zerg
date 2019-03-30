@@ -33,8 +33,8 @@ function update() {
         type: "put",
         data:data,
         success: function(res) {
-            alert(res)
-            // window.location.href='product_list.html'
+            alert("修改成功！")
+            window.location.href='category_list.html'
         },
     });
 }

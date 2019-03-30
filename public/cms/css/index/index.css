@@ -455,7 +455,7 @@ body {
           align-items: center;
 }
 .banner-wrapper .logo {
-  padding-left: 120px;
+  padding-left: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -549,7 +549,7 @@ body {
 }
 .desktop-all-box {
   height: 100%;
-  padding-top: 67px;
+  padding-top: 60px;
   box-sizing: border-box;
 }
 .desktop {
@@ -569,7 +569,6 @@ body {
           flex: 0 1 180px;
   min-width: 90px;
   border-right: 1px solid #ccc;
-  padding-top: 30px;
 }
 .desktop .desktop-menu ul li {
   width: auto;
@@ -608,6 +607,7 @@ body {
           flex: 1;
   padding-left: 45px;
   padding-bottom: 320px;
+  margin-top: -60px;
 }
 .desktop .order-box {
   height: 100%;

@@ -17,7 +17,7 @@ function save() {
         type: "post",
         data:data,
         success: function(res) {
-            alert(res)
+            alert("新增成功！")
             window.location.href='product_list.html'
         },
     });
