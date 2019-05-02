@@ -9,7 +9,7 @@ function getUrl() {
   getProduct_detail(id);
 }
 function getProduct_detail(id) {
-    var url = "http://192.168.0.107/zerg/public/index.php/api/v1/product/"+id;
+    var url = "http://120.79.28.19/zerg/public/index.php/api/v1/product/"+id;
     $.ajax({
         url: url,
         type: "get",
@@ -33,7 +33,7 @@ function update() {
         category_id: $('#category_identify').val(),
         main_img_url: imgUrl
     };
-    var url = "http://192.168.0.107/zerg/public/index.php/api/v1/product/edit";
+    var url = "http://120.79.28.19/zerg/public/index.php/api/v1/product/edit";
     $.ajax({
         url: url,
         type: "put",

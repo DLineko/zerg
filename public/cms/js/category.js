@@ -1,5 +1,5 @@
 function category_name() {
-    var url = "http://192.168.0.107/zerg/public/index.php/api/v1/category/category_name";
+    var url = "http://120.79.28.19/zerg/public/index.php/api/v1/category/category_name";
     $.ajax({
         url: url,
         type: "get",

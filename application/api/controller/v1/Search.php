@@ -6,7 +6,6 @@
  * Time: 0:39
  */
 namespace app\api\controller\v1;
-
 use app\api\model\Search as SearchModel;
 use\think\Db;
 

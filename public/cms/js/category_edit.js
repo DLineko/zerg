@@ -8,12 +8,12 @@ function getUrl() {
     getProduct_detail(id);
 }
 function getProduct_detail(id) {
-    var url = "http://192.168.0.107/zerg/public/index.php/api/v1/category/category_one/"+id;
+    var url = "http://120.79.28.19/zerg/public/index.php/api/v1/category/category_one/"+id;
     $.ajax({
         url: url,
         type: "get",
         success: function(res) {
-            var url='http://192.168.0.107/zerg/public/images'+res.topic_img_url;
+            var url='http://120.79.28.19/zerg/public/images'+res.topic_img_url;
             $('#category-title').val(res.name);
             $('#img').attr('src',url);
         },
@@ -27,7 +27,7 @@ function update() {
         name:$('#category-title').val(),
         topic_img_name: imgUrl
     };
-    var url = "http://192.168.0.107/zerg/public/index.php/api/v1/category/edit";
+    var url = "http://120.79.28.19/zerg/public/index.php/api/v1/category/edit";
     $.ajax({
         url: url,
         type: "put",

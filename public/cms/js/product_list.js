@@ -40,7 +40,7 @@ $(function(){
                         '<td>' + item.price + '</td>' +
                         '<td>' + item.stock + '</td>' +
                         '<td>' +item.category_name + '</td>' +
-                        '<td><img src="http://192.168.0.107/zerg/public/images'+item.main_img_url + '" width="50px"></td>' +
+                        '<td><img src="http://120.79.28.19/zerg/public/images'+item.main_img_url + '" width="50px"></td>' +
                         '<td><a href="javascript:void(0);" onclick=\"delete_one(this,'+item.id+')\">删除</a>&nbsp;&nbsp;<a href="javascript:void(0);" onclick=\"update_one(this,'+item.id+')\">修改</a></td>' +
                         '</tr>';
                 }
@@ -75,7 +75,7 @@ $(function(){
         search(data);
     })
     function search(data) {
-        var params={
+            var params={
             url:'search_product/'+data,
             tokenFlag:true,
             dataType:"json",

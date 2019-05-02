@@ -102,17 +102,18 @@ class Category extends BaseModel
     }
     public static  function getProductID($keywords){
         {
-            if($keywords){
-                $where['a.name'] = ['like','%'.$keywords.'%'];
+            $keyword=urldecode($keywords);
+            if($keyword){
+                $where['a.name'] = ['like','%'.$keyword.'%'];
             }
-            $keywords = Db::table('category')
+            $keyword = Db::table('category')
                 ->alias('a')
                 ->join('image b','a.topic_img_id=b.id')
                 ->field('a.*,b.url as topic_img_url')
                 ->where($where)
                 ->select();
 
-            echo ($keywords);
+            echo ($keyword);
         }
     }
 
