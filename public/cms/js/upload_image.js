@@ -1,7 +1,7 @@
 function upload() {
     var files=$("#fileSelectInput").prop('files');
     // console.log(files)
-    var url="http://y.cn/api/v1/upImage/upload";
+    var url="http://192.168.0.107/zerg/public/index.php/api/v1/upImage/upload";
     $("#attributeForm").attr("enctype", "multipart/form-data");
     $('#attributeForm').ajaxSubmit({
         url:url,
@@ -11,7 +11,7 @@ function upload() {
             if(res.error!='0') alert(res.error)
             else {
                 Rex_img_src(res.pic)
-                $('#img').show().attr('src',"http://y.cn/images"+img_url);
+                $('#img').show().attr('src',"http://192.168.0.107/zerg/public/images"+img_url);
             }
         },
         fail:function () {

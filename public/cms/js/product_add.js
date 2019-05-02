@@ -11,7 +11,7 @@ function save() {
         stock: $('#product-stock').val(),
         main_img_url: img_url
     };
-    var url = "http://y.cn/api/v1/product/add";
+    var url = "http://192.168.0.107/zerg/public/index.php/api/v1/product/add";
     $.ajax({
         url: url,
         type: "post",

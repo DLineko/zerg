@@ -7,7 +7,7 @@ function save() {
         name:$('#category-title').val(),
         topic_img_name: img_url
     };
-    var url = "http://y.cn/api/v1/category/add";
+    var url = "http://192.168.0.107/zerg/public/index.php/api/v1/category/add";
     $.ajax({
         url: url,
         type: "post",
